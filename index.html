@@ -1,68 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Declara que o documento está no formato HTML5. -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres para UTF-8. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura o layout responsivo para dispositivos móveis. -->
 
+    <!-- Link para o Font Poppins. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet"/>
+
+    <!-- Link para o Font Awesome, uma biblioteca de ícones. -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Link para o arquivo CSS local que estiliza a página. -->
     <link rel="stylesheet" href="styles/output.css">
-    <title>Dev Burguer</title>
+    <title>Dev Burguer</title> <!-- Define o título da página que aparece na aba do navegador. -->
 </head>
 <body>
     <!-- Header-->
     <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
+        <!-- Cabeçalho com largura e altura definidas, cor de fundo e imagem de fundo. -->
         <div class="w-full h-full flex flex-col justify-center items-center">
-           <img src="./assets/hamb-1.png" alt="Logo DevBurguer" class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200" />
-           <h1 class="text-4xl mt-4 mb-2 font-bold text-white">Dev Burguer</h1>
+            <!-- Contêiner flexível para centralizar o conteúdo vertical e horizontalmente. -->
+            <img src="./assets/hamb-1.png" alt="Logo DevBurguer" class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200" />
+            <!-- Imagem do logo com classes para estilo, sombra e efeitos de hover. -->
+            <h1 class="text-4xl mt-4 mb-2 font-bold text-white">Dev Burguer</h1>
+            <!-- Título principal, estilizado para ser grande, em negrito e branco. -->
 
-           <span class="text-white font-medium">Rua XXX - Fortaleza </span>
+            <span class="text-white font-medium">Rua XXX - Fortaleza </span>
+            <!-- Endereço da loja, estilizado em branco e com fonte média. -->
 
-           <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
-            <span class="text-white font-medium">Seg á Dom - 18:00 as 22:00</span>
-           </div>
-
+            <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
+                <!-- Div com fundo verde que mostra os horários de funcionamento. -->
+                <span class="text-white font-medium">Seg á Dom - 18:00 as 22:00</span>
+                <!-- Horário de funcionamento, em branco e com fonte média. -->
+            </div>
         </div>
     </header>
     <!-- Fim Header-->
 
-<h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
-    Conheça nosso cardápio
-</h2>
-<!-- Inicio Cardapio-->
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
+        Conheça nosso cardápio
+    </h2>
+    <!-- Subtítulo centralizado que apresenta o cardápio. -->
+
+    <!-- Início Cardápio-->
     <div id="menu">
         <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+            <!-- Seção principal do cardápio, utilizando grid para layout responsivo. -->
+
             <!-- Produto-->
             <div class="flex gap-2">
+                <!-- Contêiner flexível para o produto, com espaço entre os itens. -->
                 <img src="./assets/hamb-1.png" alt="Hamburguer Smash" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"/>
-            
+                <!-- Imagem do produto, com efeitos de hover para escalonamento e rotação. -->
 
                 <div>
                     <p class="font-bold"> Hamburguer Smash</p>
+                    <!-- Nome do produto em negrito. -->
                     <p class="text-sm">Pão levinho de fermentação natural de trigo, carne de 160g, queijo prato e maionese da casa.</p>
-                
+                    <!-- Descrição do produto, em fonte menor. -->
 
                     <div class="flex items-center gap-2 justify-between mt-3">
+                        <!-- Div que contém o preço e o botão, com espaço entre os itens. -->
                         <p class="font-bold text-lg">R$ 18.90</p>
+                        <!-- Preço do produto, estilizado em negrito e maior. -->
                         <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Smash" data-price="18.90">
+                            <!-- Botão para adicionar ao carrinho, com dados personalizados. -->
                             <i class="fa fa-cart-plus text-lg text-white"></i>
+                            <!-- Ícone de carrinho do Font Awesome. -->
                         </button>
                     </div>
                 </div>
-
             </div>
             <!-- Fim Produto-->
 
             <!-- Produto 2-->
             <div class="flex gap-2">
                 <img src="./assets/hamb-2.png" alt="Hamburguer Duplo" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"/>
-            
-
                 <div>
                     <p class="font-bold"> Hamburguer Duplo</p>
                     <p class="text-sm">Pão levinho de fermentação natural de trigo, 2 carnes de 120g, queijo prato e maionese da casa.</p>
-                
-
                     <div class="flex items-center gap-2 justify-between mt-3">
                         <p class="font-bold text-lg">R$ 32.90</p>
                         <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Duplo" data-price="32.90">
@@ -70,20 +89,15 @@
                         </button>
                     </div>
                 </div>
-
             </div>
             <!-- Fim Produto 2-->
 
             <!-- Produto 3-->
             <div class="flex gap-2">
                 <img src="./assets/hamb-3.png" alt="Hamburguer Cheddar" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"/>
-            
-
                 <div>
                     <p class="font-bold"> Hamburguer Cheddar</p>
                     <p class="text-sm">Pão levinho de fermentação natural de trigo, carne de 160g, queijo prato, queijo cheddar e maionese da casa.</p>
-                
-
                     <div class="flex items-center gap-2 justify-between mt-3">
                         <p class="font-bold text-lg">R$ 35.90</p>
                         <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Cheddar" data-price="35.90">
@@ -91,20 +105,15 @@
                         </button>
                     </div>
                 </div>
-
             </div>
             <!-- Fim Produto 3-->
 
             <!-- Produto 4-->
             <div class="flex gap-2">
                 <img src="./assets/hamb-4.png" alt="Hamburguer Fit" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"/>
-            
-
                 <div>
                     <p class="font-bold"> Hamburguer Fit</p>
                     <p class="text-sm">Pão levinho de fermentação natural de trigo, frango empanado, queijo prato, salada completa, pepino e maionese da casa.</p>
-                
-
                     <div class="flex items-center gap-2 justify-between mt-3">
                         <p class="font-bold text-lg">R$ 36.90</p>
                         <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Fit" data-price="36.90">
@@ -112,81 +121,95 @@
                         </button>
                     </div>
                 </div>
-
             </div>
             <!-- Fim Produto 4-->
-
         </main>
 
-    <div class="mx-auto max-w-7xl px-2 my-2">
-        <h2 class="font-bold text-3xl">
-           Bebidas 
-        </h2>
-    </div>
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="font-bold text-3xl"> Bebidas </h2>
+            <!-- Subtítulo para a seção de bebidas, estilizado em negrito e maior. -->
+        </div>
 
-    <!-- Grid Bebidas-->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
-        <!-- Produto Bebida-->
-        <div class="flex gap-2 w-full">
-            <img src="./assets/refri-1.png" alt="Coca lata" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"/>
-        
-
-            <div class="w-full">
-                <p class="font-bold"> Coca Cola lata</p>
-
-                <div class="flex items-center gap-2 justify-between mt-3">
-                    <p class="font-bold text-lg">R$ 7</p>
-                    <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Coca lata" data-price="7">
-                        <i class="fa fa-cart-plus text-lg text-white"></i>
-                    </button>
+        <!-- Grid Bebidas-->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+            <!-- Seção do cardápio para bebidas, com grid responsivo. -->
+            <!-- Produto Bebida-->
+            <div class="flex gap-2 w-full">
+                <img src="./assets/refri-1.png" alt="Coca lata" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"/>
+                <div class="w-full">
+                    <p class="font-bold"> Coca Cola lata</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 7</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Coca lata" data-price="7">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
+            <!-- Fim Produto Bebida -->
 
-        </div>
-        <!-- Fim Produto Bebida -->
-
-        <!-- Produto Bebida 2 -->
-        <div class="flex gap-2 w-full">
-            <img src="./assets/refri-2.png" alt="Guarana lata" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"/>
-        
-
-            <div class="w-full">
-                <p class="font-bold"> Guarana lata</p>
-
-                <div class="flex items-center gap-2 justify-between mt-3">
-                    <p class="font-bold text-lg">R$ 6</p>
-                    <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Guarana lata" data-price="6">
-                        <i class="fa fa-cart-plus text-lg text-white"></i>
-                    </button>
+            <!-- Produto Bebida 2 -->
+            <div class="flex gap-2 w-full">
+                <img src="./assets/refri-2.png" alt="Guarana lata" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"/>
+                <div class="w-full">
+                    <p class="font-bold"> Guaraná lata</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 6</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Guarana lata" data-price="6">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
-
+            <!-- Fim Produto Bebida 2 -->
         </div>
-        <!-- Fim Produto Bebida 2 -->
-
+        <!-- Fim Grid Bebidas-->
     </div>
+    <!-- Fim Cardápio-->
 
-    <!-- Fim Grid Bebidas-->
+    <!-- Modal Cart-->
+    <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="cart-modal">
+        <!-- Div para o modal do carrinho, com fundo semitransparente. -->
+        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+            <!-- Contêiner do modal com fundo branco e bordas arredondadas. -->
+            <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
+            <!-- Título do modal centralizado e em negrito. -->
 
+            <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+            <!-- Div que mostrará os itens do carrinho, com espaço entre os itens. -->
+
+            <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+            <!-- Exibe o total do carrinho. -->
+
+            <p class="font-bold mt-4">Endereço de entrega:</p>
+            <input type="text" placeholder="Digite seu endereço completo..." id="address" class="w-full border-2 p-1 rounded my-1"/>
+            <!-- Campo de entrada para o endereço de entrega. -->
+
+            <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>
+            <!-- Aviso de erro oculto que será exibido se o endereço não for preenchido. -->
+
+            <div class="flex items-center justify-between mt-5 w-full">
+                <button id="close-modal-btn">Fechar</button>
+                <!-- Botão para fechar o modal. -->
+                <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
+                <!-- Botão para finalizar o pedido. -->
+            </div>
+        </div> 
     </div>
- <!-- Fim Cardapio-->
+    <!-- Fim Modal Cart-->
 
- <!-- Modal Cart-->
-    <div>
-        
-    </div>
+    <!-- Button Cart Footer-->
+    <footer class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center ">
+        <!-- Rodapé fixo na parte inferior da página, com fundo vermelho. -->
+        <button class="flex items-center gap-2 text-white font-bold" id="cart-btn">
+            (<span id="cart-count">0</span>)
+            Veja meu carrinho
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
+        <!-- Botão que exibe a contagem de itens no carrinho e um ícone. -->
+    </footer>
+    <!-- Fim Button Cart Footer-->
 
- <!-- Fim Modal Cart-->
-
- <!-- Button Cart Footer-->
-  <footer class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center ">
-    <button class="flex items-center gap-2 text-white font-bold" id="cart-btn">
-        (<span id="cart-count">2</span>)
-        Veja meu carrinho
-        <i class="fa fa-cart-plus text-lg text-white"></i>
-    </button>
-  </footer>
-  <!-- Fim Button Cart Footer-->
-
+    <script src="script.js"></script>
 </body>
 </html>

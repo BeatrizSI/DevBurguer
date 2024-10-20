@@ -140,7 +140,19 @@ checkoutBtn.addEventListener("click", function(){
 
     const isOpen = checkRestaurantOpen();
     if(!isOpen){
-        alert("Restaurante fechado no momento!")
+        
+        Toastify({
+            text: "Ops! Restaurante fechado",
+            duration: 3000,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                background: "#ef4444",
+            },
+        }).showToast();
+
         return;
     }
 
@@ -152,6 +164,19 @@ checkoutBtn.addEventListener("click", function(){
     }
 
     //enviar o pedido para a api whats
+    const cartItems = cart.map((item) => {
+        return(
+            `${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} |`
+        )
+    }).join("")
+
+    const message = encodeURIComponent(cartItems)
+    const phone = "88997328310"
+
+    window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blanck")
+
+    cart = [];
+    updateCartModal();
 })
 
 // verificar a hora e manipular o card horario
